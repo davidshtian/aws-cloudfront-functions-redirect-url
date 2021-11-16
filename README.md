@@ -2,7 +2,7 @@
 
 ### Background
 
-As user of Amazon CloudFront has some requirement to redict one URL to the expected URL, usually this can be done via origin web servers, while this would impact a lot at user experiences. An alternative option to achieve this goal is redirecting URL at edge. Here comes the CloudFront Functions. For more details about CloudFront Functions, please refer to the [AWS official docs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html) or the [launch blog](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/).
+As users of Amazon CloudFront have some requirement to redict one URL to the expected URL, usually this can be done via origin web servers, while this would impact a lot at user experiences. An alternative option to achieve this goal is redirecting URL at edge. Here comes the CloudFront Functions. For more details about CloudFront Functions, please refer to the [AWS official docs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html) or the [launch blog](https://aws.amazon.com/blogs/aws/introducing-cloudfront-functions-run-your-code-at-the-edge-with-low-latency-at-any-scale/).
 
 CloudFront Functions and Lambda@Edge:
 ![image](https://user-images.githubusercontent.com/14228056/141926456-fa651f4d-529d-44ab-b946-4718fcfff6f7.png)
@@ -12,9 +12,9 @@ CloudFront Functions vs Lambda@Edge:
 
 ### Root Domain at CloudFront
 
-Another requirement is to use Amazon CloudFront to deliver content from the root domain, or "zone apex" of the website. For example, to configure both http://www.example.com and http://example.com to point at the same CloudFront distribution. This is also [support by CloudFront](https://aws.amazon.com/about-aws/whats-new/2013/06/11/announcing-custom-ssl-certificates-and-zone-apex-support-for-cloudfront/) long time ago, implemented by Route53 Alias record.
+Another requirement is to use Amazon CloudFront to deliver content from the root domain, or "zone apex" of the website. For example, to configure both *http://www.example.com* and *http://example.com* to point at the same CloudFront distribution. This is also [support by CloudFront](https://aws.amazon.com/about-aws/whats-new/2013/06/11/announcing-custom-ssl-certificates-and-zone-apex-support-for-cloudfront/) long time ago, implemented by Route53 Alias record.
 
-Normally, users need to redict root domain to a comman domain, such as from *https://example.com* to *http://www.example.com*, and this solution could also help with this scenario.
+Normally, users need to redict root domain to a comman domain, such as from *https://example.com* to *https://www.example.com*, and this solution could also help with this scenario.
 
 ### Usage
 Develop and Publish the function in CloudFront:
